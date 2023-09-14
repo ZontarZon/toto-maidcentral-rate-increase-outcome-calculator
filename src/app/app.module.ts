@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { BodyComponent } from './components/body/body.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormInputFieldComponent } from './components/form-input-field/form-input-field.component';
+import { FormSubmitButtonComponent } from './components/form-submit-button/form-submit-button.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BannerComponent,
-    BodyComponent
+    BodyComponent,
+    FormComponent,
+    FormSubmitButtonComponent,
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, FormInputFieldComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
