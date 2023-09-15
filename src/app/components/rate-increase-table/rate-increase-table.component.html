@@ -1,0 +1,34 @@
+<div>
+  <div class="results_section_hr"><h3>Rate Increase</h3></div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Measurement</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="current">
+      <th mat-header-cell *matHeaderCellDef>Current</th>
+      <td mat-cell *matCellDef="let element">{{ element.current }}</td>
+    </ng-container>
+
+    <!-- hourly Column -->
+    <ng-container matColumnDef="hourly">
+      <th mat-header-cell *matHeaderCellDef>hourly</th>
+      <td mat-cell *matCellDef="let element">{{ element.hourly }}</td>
+    </ng-container>
+
+    <!-- feeSplit Column -->
+    <ng-container matColumnDef="feeSplit">
+      <th mat-header-cell *matHeaderCellDef>feeSplit</th>
+      <td mat-cell *matCellDef="let element">{{ element.feeSplit }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

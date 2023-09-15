@@ -1,14 +1,12 @@
 <div id="form_graybox">
   <div id="form_contents">
-    {{ jobsPerMonth }}
-    {{ revenuePercent }}
     <div>
       <h2>Values</h2>
       <div id="form_flexbox">
         <app-form-input-field
           prefix=""
           label="Jobs per Month"
-          placeholder="123"
+          placeholder="500"
           icon="mode_edit"
           (change)="updateJobsPerMonth($event)"
         ></app-form-input-field>
@@ -61,3 +59,14 @@
     </div>
   </div>
 </div>
+<app-overall-table
+  jobsPerMonth="{{ jobsPerMonth }}"
+  revenuePercent="{{ revenuePercent }}"
+  billRatePerJob="{{ billRatePerJob }}"
+  recurringHomesLostPerMonth="{{ recurringHomesLostPerMonth }}"
+  netProfit="{{ netProfit }}"
+  rateIncrease="{{ rateIncrease }}"
+  expectedJobLoss="{{ expectedJobLoss }}"
+></app-overall-table>
+
+<app-rate-increase-table></app-rate-increase-table>
