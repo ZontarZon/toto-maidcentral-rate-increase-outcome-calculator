@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 
 export interface RateIncreaseRow {
@@ -16,14 +16,6 @@ export interface RateIncreaseRow {
   imports: [MatTableModule],
 })
 export class RateIncreaseTableComponent implements OnChanges {
-  @Input() jobsPerMonth!: number | null;
-  @Input() revenuePercent!: number | null;
-  @Input() billRatePerJob!: number | null;
-  @Input() recurringHomesLostPerMonth!: number | null;
-  @Input() netProfit!: number | null;
-  @Input() rateIncrease!: number | null;
-  @Input() expectedJobLoss!: number | null;
-
   displayedColumns: string[] = ['name', 'current', 'hourly', 'feeSplit'];
   dataSource = this.buildData();
 
