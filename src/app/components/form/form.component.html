@@ -1,7 +1,54 @@
 <div id="form_graybox">
   <div id="form_contents">
     <div>
-      <app-form-input-field></app-form-input-field>
+      <h2>Values</h2>
+      <div id="form_flexbox">
+        <app-form-input-field
+          prefix=""
+          label="Jobs per Month"
+          placeholder="123"
+          icon="mode_edit"
+        ></app-form-input-field>
+        <app-form-input-field
+          prefix=""
+          label="Payroll / Revenue Percent"
+          placeholder="40"
+          icon="percent"
+        ></app-form-input-field>
+        <app-form-input-field
+          prefix="$"
+          label="Bill rate per Job"
+          placeholder="175"
+          icon="mode_edit"
+        ></app-form-input-field>
+        <app-form-input-field
+          prefix=""
+          label="Recurring Homes Lost/Month"
+          placeholder="10"
+          icon="percent"
+        ></app-form-input-field>
+        <app-form-input-field
+          prefix=""
+          label="Net Profit"
+          placeholder="10"
+          icon="percent"
+        ></app-form-input-field>
+        <app-form-input-field
+          prefix=""
+          label="% Rate Increase"
+          placeholder="10"
+          icon="percent"
+        ></app-form-input-field>
+        <app-form-input-field
+          prefix=""
+          label="% Expected Job Loss"
+          placeholder="10"
+          icon="percent"
+        ></app-form-input-field>
+      </div>
+      <div id="form_buttons_container">
+        <app-form-submit-button></app-form-submit-button>
+      </div>
     </div>
   </div>
 </div>

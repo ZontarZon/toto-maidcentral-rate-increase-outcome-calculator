@@ -1,6 +1,7 @@
 #header {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 78px;
@@ -11,6 +12,7 @@
 
   #header_text {
     font-weight: initial;
+    margin: 0px;
   }
 
   #maidcentral_logo {

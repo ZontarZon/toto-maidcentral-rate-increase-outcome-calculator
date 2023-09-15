@@ -1,5 +1,6 @@
-<mat-form-field class="example-full-width" appearance="outline">
-  <mat-label>Jobs Per Month</mat-label>
-  <input type="number" matInput placeholder="123" />
-  <mat-icon matSuffix>mode_edit</mat-icon>
+<mat-form-field class="form_input" appearance="outline" floatLabel="always">
+  <span matPrefix style="margin-left: 5px">{{ prefix }}</span>
+  <mat-label>{{ label }}</mat-label>
+  <input type="number" matInput placeholder="{{ placeholder }}" />
+  <mat-icon matSuffix>{{ icon }}</mat-icon>
 </mat-form-field>

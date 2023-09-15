@@ -1,8 +1,21 @@
 #form_graybox {
   background-color: #f4f4f4;
   width: 100%;
+  border-bottom: 1px solid #929292;
 
   #form_contents {
     padding: 20px;
+  }
+
+  #form_flexbox {
+    display: flex;
+    flex-flow: wrap;
+    grid-gap: 10px;
+    justify-content: space-around;
+  }
+
+  #form_buttons_container {
+    display: flex;
+    justify-content: center;
   }
 }

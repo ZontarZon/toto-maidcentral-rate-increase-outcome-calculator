@@ -12,6 +12,20 @@ body {
   align-items: center !important;
 }
 
+.mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+  background-color: white !important;
+}
+
 input::placeholder {
   color: gray !important;
+}
+
+.mat-mdc-raised-button.mat-primary {
+  background-color: #0288d1 !important;
+}
+
+.mat-mdc-text-field-wrapper,
+.mat-mdc-form-field-flex,
+.mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label {
+  height: 38px !important;
 }

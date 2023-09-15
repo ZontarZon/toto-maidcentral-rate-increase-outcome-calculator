@@ -9,14 +9,13 @@ import { FormSubmitButtonComponent } from './components/form-submit-button/form-
 import { FormComponent } from './components/form/form.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BannerComponent,
-    BodyComponent,
-    FormComponent,
+  declarations: [AppComponent, BannerComponent, BodyComponent, FormComponent],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormInputFieldComponent,
     FormSubmitButtonComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, FormInputFieldComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

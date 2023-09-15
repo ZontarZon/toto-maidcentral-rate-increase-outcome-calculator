@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,4 +14,16 @@ import { MatInputModule } from '@angular/material/input';
   standalone: true,
   imports: [FormsModule, MatFormFieldModule, MatInputModule, MatIconModule],
 })
-export class FormInputFieldComponent {}
+export class FormInputFieldComponent {
+  @Input() label!: string;
+  @Input() placeholder!: string;
+  @Input() icon!: string;
+  @Input() prefix!: string;
+
+  constructor() {}
+
+  ngOnInit() {
+    console.log(this.icon);
+    console.log(this.label);
+  }
+}
