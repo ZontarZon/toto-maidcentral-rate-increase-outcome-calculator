@@ -11,6 +11,7 @@ import { LowerCustomerTurnoverTableComponent } from './components/lower-customer
 import { LowerPayRollRevenuePercTableComponent } from './components/lower-pay-roll-revenue-perc-table/lower-pay-roll-revenue-perc-table.component';
 import { OverallTableComponent } from './components/overall-table/overall-table.component';
 import { RateIncreaseTableComponent } from './components/rate-increase-table/rate-increase-table.component';
+import { ToggleFormOpenButtonComponent } from './components/toggle-form-open-button/toggle-form-open-button.component';
 
 @NgModule({
   declarations: [AppComponent, BannerComponent, BodyComponent, FormComponent],
@@ -23,6 +24,7 @@ import { RateIncreaseTableComponent } from './components/rate-increase-table/rat
     OverallTableComponent,
     LowerPayRollRevenuePercTableComponent,
     LowerCustomerTurnoverTableComponent,
+    ToggleFormOpenButtonComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

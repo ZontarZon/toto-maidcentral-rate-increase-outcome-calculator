@@ -13,6 +13,12 @@ export class FormComponent {
   @Input() netProfit!: number | null;
   @Input() rateIncrease!: number | null;
   @Input() expectedJobLoss!: number | null;
+  @Input() formOpen: boolean = true;
+
+  toggleFormOpen() {
+    console.log('toggling');
+    this.formOpen = !this.formOpen;
+  }
 
   updateJobsPerMonth(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

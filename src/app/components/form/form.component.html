@@ -1,59 +1,67 @@
 <div id="form_graybox">
   <div id="form_contents">
     <div>
-      <h2>Values</h2>
-      <div id="form_flexbox">
-        <app-form-input-field
-          prefix=""
-          label="Jobs per Month"
-          placeholder="500"
-          icon="mode_edit"
-          (change)="updateJobsPerMonth($event)"
-        ></app-form-input-field>
-        <app-form-input-field
-          prefix=""
-          label="Payroll / Revenue Percent"
-          placeholder="40"
-          icon="percent"
-          (change)="updateRevenuePercent($event)"
-        ></app-form-input-field>
-        <app-form-input-field
-          prefix="$"
-          label="Bill rate per Job"
-          placeholder="175"
-          icon="mode_edit"
-          (change)="updateBillRatePerJob($event)"
-        ></app-form-input-field>
-        <app-form-input-field
-          prefix=""
-          label="Recurring Homes Lost/Month"
-          placeholder="10"
-          icon="percent"
-          (change)="updateRecurringHomesLostPerMonth($event)"
-        ></app-form-input-field>
-        <app-form-input-field
-          prefix=""
-          label="Net Profit"
-          placeholder="10"
-          icon="percent"
-          (change)="updateNetProfit($event)"
-        ></app-form-input-field>
-        <app-form-input-field
-          prefix=""
-          label="% Rate Increase"
-          placeholder="10"
-          icon="percent"
-          (change)="updateRateIncrease($event)"
-        ></app-form-input-field>
-        <app-form-input-field
-          prefix=""
-          label="% Expected Job Loss"
-          placeholder="10"
-          icon="percent"
-          (change)="updateExpectedJobLoss($event)"
-        ></app-form-input-field>
+      <div [ngClass]="{ open: formOpen, closed: !formOpen }">
+        <h2>Values</h2>
+        <div id="form_flexbox">
+          <app-form-input-field
+            prefix=""
+            label="Jobs per Month"
+            placeholder="500"
+            icon="mode_edit"
+            (change)="updateJobsPerMonth($event)"
+          ></app-form-input-field>
+          <app-form-input-field
+            prefix=""
+            label="Payroll / Revenue Percent"
+            placeholder="40"
+            icon="percent"
+            (change)="updateRevenuePercent($event)"
+          ></app-form-input-field>
+          <app-form-input-field
+            prefix="$"
+            label="Bill rate per Job"
+            placeholder="175"
+            icon="mode_edit"
+            (change)="updateBillRatePerJob($event)"
+          ></app-form-input-field>
+          <app-form-input-field
+            prefix=""
+            label="Recurring Homes Lost/Month"
+            placeholder="10"
+            icon="percent"
+            (change)="updateRecurringHomesLostPerMonth($event)"
+          ></app-form-input-field>
+          <app-form-input-field
+            prefix=""
+            label="Net Profit"
+            placeholder="10"
+            icon="percent"
+            (change)="updateNetProfit($event)"
+          ></app-form-input-field>
+          <app-form-input-field
+            prefix=""
+            label="% Rate Increase"
+            placeholder="10"
+            icon="percent"
+            (change)="updateRateIncrease($event)"
+          ></app-form-input-field>
+          <app-form-input-field
+            prefix=""
+            label="% Expected Job Loss"
+            placeholder="10"
+            icon="percent"
+            (change)="updateExpectedJobLoss($event)"
+          ></app-form-input-field>
+        </div>
       </div>
       <div id="form_buttons_container">
+        <span
+          ><app-toggle-form-open-button
+            [buttonCaption]="formOpen ? 'Hide Form' : 'Show Form'"
+            (click)="toggleFormOpen()"
+          ></app-toggle-form-open-button
+        ></span>
         <app-form-submit-button></app-form-submit-button>
       </div>
     </div>

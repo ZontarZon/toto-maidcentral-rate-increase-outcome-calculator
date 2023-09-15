@@ -14,8 +14,38 @@
     justify-content: space-around;
   }
 
+  .open,
+  .closed {
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+  }
+
+  .open {
+    max-height: 100vh;
+  }
+
+  .closed {
+    max-height: 0px;
+  }
+
   #form_buttons_container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #form_graybox {
+    position: fixed;
+    top: 78px;
+    left: 0px;
+  }
+
+  #form_contents {
+    padding: 10px;
+  }
+
+  #form_flexbox {
+    grid-gap: 0px;
   }
 }
