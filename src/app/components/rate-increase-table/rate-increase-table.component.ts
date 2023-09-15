@@ -15,6 +15,11 @@ export interface RateIncreaseRow {
   standalone: true,
   imports: [MatTableModule],
 })
+
+/**
+ * RateIncreaseTableComponent contains the metrics for the RATE INCREASE
+ * section of the excel spreadsheet.
+ */
 export class RateIncreaseTableComponent implements OnChanges {
   displayedColumns: string[] = ['name', 'current', 'hourly', 'feeSplit'];
   dataSource = this.buildData();
@@ -23,6 +28,12 @@ export class RateIncreaseTableComponent implements OnChanges {
     this.dataSource = this.buildData();
   }
 
+  /**
+   * This data will be rebuilt with value changes. When the data is fetched
+   * from the API, it's passed here and will build when ng detects a state
+   * change. Right now, it contains dummy data.
+   * @returns {Object Array} containing the new data for the table.
+   */
   buildData() {
     const DATA: RateIncreaseRow[] = [
       {

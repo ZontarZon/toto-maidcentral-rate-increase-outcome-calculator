@@ -3,6 +3,8 @@
     <div>
       <div [ngClass]="{ open: formOpen, closed: !formOpen }">
         <h2>Values</h2>
+
+        <!-- The input fields. -->
         <div id="form_flexbox">
           <app-form-input-field
             prefix=""
@@ -67,19 +69,16 @@
     </div>
   </div>
 </div>
-<h2 style="padding: 20px 20px 0px">Outcomes</h2>
-<app-overall-table
-  jobsPerMonth="{{ jobsPerMonth }}"
-  revenuePercent="{{ revenuePercent }}"
-  billRatePerJob="{{ billRatePerJob }}"
-  recurringHomesLostPerMonth="{{ recurringHomesLostPerMonth }}"
-  netProfit="{{ netProfit }}"
-  rateIncrease="{{ rateIncrease }}"
-  expectedJobLoss="{{ expectedJobLoss }}"
-></app-overall-table>
 
-<app-rate-increase-table></app-rate-increase-table>
+<div id="outcomes_container">
+  <h2 style="padding: 20px 20px 0px">Outcomes</h2>
 
-<app-lower-pay-roll-revenue-perc-table></app-lower-pay-roll-revenue-perc-table>
+  <!-- Table sections. -->
+  <app-overall-table></app-overall-table>
 
-<app-lower-customer-turnover-table></app-lower-customer-turnover-table>
+  <app-rate-increase-table></app-rate-increase-table>
+
+  <app-lower-pay-roll-revenue-perc-table></app-lower-pay-roll-revenue-perc-table>
+
+  <app-lower-customer-turnover-table></app-lower-customer-turnover-table>
+</div>

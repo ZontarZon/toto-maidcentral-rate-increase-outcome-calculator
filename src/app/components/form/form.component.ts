@@ -5,6 +5,12 @@ import { Component, Input } from '@angular/core';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })
+
+/**
+ * FormComponent contains and handles all the input fields. Later,
+ * these values can be used in combination with an api call and
+ * Observer to fetch data to populate the tables.
+ */
 export class FormComponent {
   @Input() jobsPerMonth!: number | null;
   @Input() revenuePercent!: number | null;

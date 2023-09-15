@@ -14,14 +14,12 @@ export interface ProfitRow {
   standalone: true,
   imports: [MatTableModule],
 })
+
+/**
+ * OverallTableComponent displays the three metrics in bold at the bottom of
+ * the excel spreadsheet.
+ */
 export class OverallTableComponent implements OnChanges {
-  @Input() jobsPerMonth!: string | null; //C4
-  @Input() revenuePercent!: string | null; //C5
-  @Input() billRatePerJob!: string | null; //C6
-  @Input() recurringHomesLostPerMonth!: string | null; //C7
-  @Input() netProfit!: string | null; // C8
-  @Input() rateIncrease!: string | null; //C10
-  @Input() expectedJobLoss!: string | null; //C11
   @Input()
   displayedColumns: string[] = ['name', 'hourly', 'feeSplit'];
   dataSource = this.buildData();
@@ -30,6 +28,12 @@ export class OverallTableComponent implements OnChanges {
     this.dataSource = this.buildData();
   }
 
+  /**
+   * This data will be rebuilt with value changes. When the data is fetched
+   * from the API, it's passed here and will build when ng detects a state
+   * change. Right now, it contains dummy data.
+   * @returns {Object Array} containing the new data for the table.
+   */
   buildData() {
     const DATA: ProfitRow[] = [
       {
