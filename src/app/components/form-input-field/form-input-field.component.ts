@@ -19,11 +19,9 @@ export class FormInputFieldComponent {
   @Input() placeholder!: string;
   @Input() icon!: string;
   @Input() prefix!: string;
+  @Input() formValue!: string;
 
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.icon);
-    console.log(this.label);
-  }
+  ngOnInit() {}
 }
