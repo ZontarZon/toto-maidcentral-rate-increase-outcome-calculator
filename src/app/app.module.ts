@@ -15,6 +15,7 @@ import { RateIncreaseTableComponent } from './components/rate-increase-table/rat
 import { ToggleFormOpenButtonComponent } from './components/toggle-form-open-button/toggle-form-open-button.component';
 
 import { FormsModule } from '@angular/forms';
+import { DownloadPdfButtonComponent } from './components/download-pdf-button/download-pdf-button.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FormsModule } from '@angular/forms';
     LowerCustomerTurnoverTableComponent,
     ToggleFormOpenButtonComponent,
     FormsModule,
+    DownloadPdfButtonComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
