@@ -19,10 +19,11 @@ export class FormComponent {
   @Input() netProfit!: number | null;
   @Input() rateIncrease!: number | null;
   @Input() expectedJobLoss!: number | null;
+  @Input() lowerPayrollPerc!: number | null;
+  @Input() improveHomesLostPerc!: number | null;
   @Input() formOpen: boolean = true;
 
   toggleFormOpen() {
-    console.log('toggling');
     this.formOpen = !this.formOpen;
   }
 
@@ -86,6 +87,24 @@ export class FormComponent {
       this.expectedJobLoss = parseInt(filterValue);
     } else {
       this.expectedJobLoss = null;
+    }
+  }
+
+  updateLowerPayrollPerc(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    if (filterValue) {
+      this.lowerPayrollPerc = parseInt(filterValue);
+    } else {
+      this.lowerPayrollPerc = null;
+    }
+  }
+
+  updateImproveHomesLostPerc(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    if (filterValue) {
+      this.improveHomesLostPerc = parseInt(filterValue);
+    } else {
+      this.improveHomesLostPerc = null;
     }
   }
 }

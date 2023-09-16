@@ -1,3 +1,10 @@
+.flexbox {
+  display: flex;
+  flex-flow: wrap;
+  grid-gap: 10px;
+  justify-content: space-around;
+}
+
 #form_graybox {
   background-color: #f4f4f4;
   width: 100%;
@@ -5,13 +12,6 @@
 
   #form_contents {
     padding: 20px;
-  }
-
-  #form_flexbox {
-    display: flex;
-    flex-flow: wrap;
-    grid-gap: 10px;
-    justify-content: space-around;
   }
 
   .open,

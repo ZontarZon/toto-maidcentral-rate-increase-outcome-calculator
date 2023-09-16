@@ -5,12 +5,13 @@
         <h2>Values</h2>
 
         <!-- The input fields. -->
-        <div id="form_flexbox">
+        <div id="form_flexbox" class="flexbox">
           <app-form-input-field
             prefix=""
             label="Jobs per Month"
             placeholder="500"
             icon="mode_edit"
+            size="small"
             (change)="updateJobsPerMonth($event)"
           ></app-form-input-field>
           <app-form-input-field
@@ -18,6 +19,7 @@
             label="Payroll / Revenue Percent"
             placeholder="40"
             icon="percent"
+            size="small"
             (change)="updateRevenuePercent($event)"
           ></app-form-input-field>
           <app-form-input-field
@@ -25,6 +27,7 @@
             label="Bill rate per Job"
             placeholder="175"
             icon="mode_edit"
+            size="small"
             (change)="updateBillRatePerJob($event)"
           ></app-form-input-field>
           <app-form-input-field
@@ -32,6 +35,7 @@
             label="Recurring Homes Lost/Month"
             placeholder="10"
             icon="percent"
+            size="small"
             (change)="updateRecurringHomesLostPerMonth($event)"
           ></app-form-input-field>
           <app-form-input-field
@@ -39,6 +43,7 @@
             label="Net Profit"
             placeholder="10"
             icon="percent"
+            size="small"
             (change)="updateNetProfit($event)"
           ></app-form-input-field>
           <app-form-input-field
@@ -46,6 +51,7 @@
             label="% Rate Increase"
             placeholder="10"
             icon="percent"
+            size="small"
             (change)="updateRateIncrease($event)"
           ></app-form-input-field>
           <app-form-input-field
@@ -53,7 +59,29 @@
             label="% Expected Job Loss"
             placeholder="10"
             icon="percent"
+            size="small"
             (change)="updateExpectedJobLoss($event)"
+          ></app-form-input-field>
+        </div>
+        <hr style="margin-bottom: 30px" />
+        <div class="flexbox">
+          <app-form-input-field
+            class="lower_form_input"
+            prefix=""
+            label="Lower Payroll/Revenue Percent by..."
+            placeholder="5"
+            icon="percent"
+            size="large"
+            (change)="updateLowerPayrollPerc($event)"
+          ></app-form-input-field>
+          <app-form-input-field
+            class="lower_form_input"
+            prefix=""
+            label="Improve Recurring Homes Lost/Month by..."
+            placeholder="10"
+            icon="percent"
+            size="large"
+            (change)="updateImproveHomesLostPerc($event)"
           ></app-form-input-field>
         </div>
       </div>

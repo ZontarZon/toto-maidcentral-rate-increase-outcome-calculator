@@ -25,12 +25,6 @@ export class LowerPayRollRevenuePercTableComponent implements OnChanges {
   buildData() {
     const DATA: LowerPayrollRevPercRow[] = [
       {
-        name: 'Lower Payroll/Revenue Percent',
-        current: '5%',
-        hourly: '',
-        feeSplit: '',
-      },
-      {
         name: 'Payroll to Revenue',
         current: '40%',
         hourly: ' $ 31,588 (34.55%)',

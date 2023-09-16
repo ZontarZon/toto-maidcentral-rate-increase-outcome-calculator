@@ -20,6 +20,7 @@ export class FormInputFieldComponent {
   @Input() icon!: string;
   @Input() prefix!: string;
   @Input() formValue!: string;
+  @Input() size!: string;
 
   constructor() {}
 

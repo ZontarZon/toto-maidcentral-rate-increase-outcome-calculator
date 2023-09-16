@@ -37,12 +37,6 @@ export class LowerCustomerTurnoverTableComponent implements OnChanges {
   buildData() {
     const DATA: CustomerTurnoverRow[] = [
       {
-        name: 'Improve Recurring Homes Lost/Month',
-        current: '10%',
-        hourly: '',
-        feeSplit: '',
-      },
-      {
         name: 'Number of Recurring Homes Lost/Month',
         current: '25',
         hourly: '  22.50 ',
